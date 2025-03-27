@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from Api import suggest_next_word, get_next_options
+from Api import suggest_next_word
 from Generator import generator_init
 
 app = FastAPI()
@@ -22,7 +22,7 @@ async def suggest_word(request: Request):
     data = await request.json()
     return suggest_next_word(data)
 
-@app.post("/get_next_options")
-async def next_options(request: Request):
-    data = await request.json()
-    return get_next_options(data)
+#@app.post("/get_next_options")
+#async def next_options(request: Request):
+    #data = await request.json()
+    #return get_next_options(data)
