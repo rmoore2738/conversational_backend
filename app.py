@@ -15,8 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize models
-generator_init()
+
 
 @app.post("/suggest_next_word")
 async def suggest_word(request: Request):
