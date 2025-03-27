@@ -1,8 +1,9 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from Api import suggest_next_word
-from Generator import generator_init
+from Generator import Generator
 
+gen = Generator()
 app = FastAPI()
 
 # Allow frontend access
