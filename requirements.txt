@@ -3,3 +3,4 @@ uvicorn
 openai
 transformers==4.27.1
 torch
+python-multipart
